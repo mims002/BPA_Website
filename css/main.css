@@ -107,7 +107,23 @@ body{
 
 @media screen and (max-width : 460px){
 	body{
-		font-size: 50%;
+		font-size: 60%;
+	}
+	.header{
+		letter-spacing: 10px;
+		padding: 0;
+		padding-top: 11vh;
+	}
+	.headerUnder{
+		padding:0;
+		letter-spacing: 9px;
+	}
+	
+}
+
+@media screen and (max-width : 360px){
+	body{
+		font-size: 40%;
 	}
 	.header{
 		letter-spacing: 10px;
