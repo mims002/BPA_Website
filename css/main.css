@@ -3,6 +3,19 @@ body{
 	font-family: 'Source Sans Pro', sans-serif;
 }
 
+/*
+* This will hold each individual page
+*/
+.page_container{
+	width : 100vw;
+	height: 100vh; 
+	
+	background: rgb(220,220,220);
+	border-bottom: 2px solid #595959;
+}
+
+
+
 .header{
 	
 	border-bottom: 2px solid #595959;
@@ -10,7 +23,7 @@ body{
 	color: #7a7979;
 	vertical-align: text-top;
 	font-size: 5.5em;
-	margin-top: 30vh;
+	padding-top: 30vh;
 	margin-left: 10vh;
 	margin-right: 10vh;
 	padding-bottom: 20px;
