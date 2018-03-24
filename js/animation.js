@@ -4,19 +4,18 @@ var clone = document.getElementById('blurCanvasBottom');
 var cloneCtx = clone.getContext('2d');
 var ctx = canvas.getContext('2d');
 
-
-var w = $('#blurCanvasTop').width();
-var h = $('#blurCanvasTop').height();
-
-var ww = $(window).width();
-var wh = $(window).height();
+var ww = $("#home").outerWidth(true);
+var wh = $("#home").outerHeight(false);
 canvas.width = ww;
 canvas.height= wh;
 var partCount = 5;
 var particles = [];
 
 function particle(){
-  this.color = 'rgba(168,43,0,'+ Math.random()+')';
+  if(Math.random()>0.5)
+	this.color = 'rgba(168,43,0,'+ (Math.random()+.2)+')';
+  else
+	this.color = 'rgba(69,142,0,'+(Math.random()+.2)+')';
   console.log(this.color);
   this.x = randomInt(0,ww);
   this.y = randomInt(0,wh);
@@ -53,11 +52,12 @@ function particle(){
   this.draw = function () {
     ctx.beginPath();
     ctx.fillStyle = this.color;
-    ctx.arc(this.x, this.y, this.radius , 0, Math.PI * 2, false);
+    ctx.arc(this.x, this.y, this.radius  , 0, Math.PI * 2, false);
     ctx.fill();
   };
 }
 function clearCanvas() {
+ 
  cloneCtx.clearRect(0, 0, ww, wh);
  ctx.clearRect(0, 0, ww, wh);
 }
@@ -98,8 +98,8 @@ requestAnimationFrame(animateParticles);
 cloneCtx.drawImage(canvas, 0, 0);
 
 $(window).on('resize',function(){
-  ww = $(window).width();
-  wh = $(window).height();
+  var ww = $("#home").outerWidth(true);
+  var wh = $("#home").outerHeight(false); 
   canvas.width = ww;
   canvas.height= wh;
   clearCanvas();
