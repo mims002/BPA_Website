@@ -10,17 +10,51 @@ body{
 * This will hold each individual page
 */
 .page_container{
-	width : 100%;
+	width : 100vw;
 	height: 100vh; 
 	min-height: 800px;
-	//background: rgb(220,220,220);
+
+	//border-bottom: 1px solid black;
+	//box-shadow: inset 0 8px 8px -9px #111;
+	background: rgba(0,0,0, .05);
 	//overflow: hidden;
 	
+	
+	position:relative;
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+	
+}
+
+.page_container:before, .page_container:after{
+	 content:"";
+    position:absolute;
+    z-index:-1;
+    -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    box-shadow:0 0 20px rgba(0,0,0,0.8);
+
+    bottom:0;
+    left:10px;
+    right:10px;
+    -moz-border-radius:100px / 10px;
+    border-radius:100px / 10px;
+}
+
+.page_container:after{
+	 right:10px;
+    left:auto;
+    -webkit-transform:skew(8deg) rotate(3deg);
+       -moz-transform:skew(8deg) rotate(3deg);
+        -ms-transform:skew(8deg) rotate(3deg);
+         -o-transform:skew(8deg) rotate(3deg);
+            transform:skew(8deg) rotate(3deg);
 }
 .separator{
 	width: 100vw;
 	height: 1px;
-	//box-shadow: 0px 10px 0px 20px black;
+	
 }
 
 
@@ -60,17 +94,22 @@ body{
 	text-shadow: 0px 0px 5px rgba(0,0,0,.2);
 	margin-top: 40px;
 	padding: 5px;
+	padding-bottom: 30px;
 	
 }
-
+.space{
+	width:100px;
+	height: 30px;
+}
 .menu_containter{
 	list-style-type:none;
     padding:0px;
 	display: table;    
-	margin: 0 auto;
-	margin-top: 50px;
+
+	margin-top: 20px;
 	position: absolute;
-	bottom: 100px;
+	bottom:80px;
+	
 	z-index: 2;
 	
 	
@@ -79,7 +118,7 @@ body{
 
 /*Create a horizontal list with spacing*/
 .menu_containter li{
-	
+	margin-top: 100px;
 	display: incline-block;
 	
 	float: left;
@@ -131,12 +170,12 @@ body{
 		font-size: 60%;
 	}
 	.page_container{
-		min-height:500px;
+		min-height:550px;
 	}
 	.header{
 		letter-spacing: 10px;
 		padding: 0;
-		padding-top: 10vh;
+		padding-top: 5vh;
 	}
 	.headerUnder{
 		padding:0;
@@ -154,6 +193,9 @@ body{
 @media screen and (max-width : 360px){
 	body{
 		font-size: 40%;
+	}
+	.page_container{
+		min-height:500px;
 	}
 	.header{
 		letter-spacing: 10px;

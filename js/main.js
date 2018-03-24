@@ -12,7 +12,10 @@ function start(){
 function fixPosition(){
 	//postion the icons for social media
 	var x = $("#home").width();
+	var y = $("#home").height();
 	$("#socialMedia").css("left",x/2 - $("#socialMedia").width()/2);
+	
+	
 }
 
 function print(x){
