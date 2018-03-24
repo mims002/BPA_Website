@@ -9,11 +9,16 @@ body{
 /*
 * This will hold each individual page
 */
+#home{
+	width : 100vw;
+	height: 100vh;
+	min-height: 800px;
+}
+
 .page_container{
 	width : 100vw;
-	
-	min-height: 800px; 
 	height: auto;
+	min-height: 100vh; 
 	
 
 	//border-bottom: 1px solid black;
@@ -191,8 +196,12 @@ tr:nth-child(even) {
 	body{
 		font-size: 60%;
 	}
+	#home{
+
+		min-height:550px
+	}
 	.page_container{
-		min-height:550px;
+		
 	}
 	.header{
 		letter-spacing: 10px;
@@ -216,8 +225,12 @@ tr:nth-child(even) {
 	body{
 		font-size: 40%;
 	}
+	#home{
+
+		min-height:500px
+	}
 	.page_container{
-		min-height:500px;
+		
 	}
 	.header{
 		letter-spacing: 10px;
