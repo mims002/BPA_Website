@@ -11,8 +11,9 @@ canvas.height= wh;
 var partCount = 5;
 var particles = [];
 
+var switchColor = false;
 function particle(){
-  if(Math.random()>0.5)
+  if(switchColor= !switchColor)
 	this.color = 'rgba(168,43,0,'+ (Math.random()+.2)+')';
   else
 	this.color = 'rgba(69,142,0,'+(Math.random()+.2)+')';
@@ -98,8 +99,8 @@ requestAnimationFrame(animateParticles);
 cloneCtx.drawImage(canvas, 0, 0);
 
 $(window).on('resize',function(){
-  var ww = $("#home").outerWidth(true);
-  var wh = $("#home").outerHeight(false); 
+  ww = $("#home").outerWidth(true);
+  wh = $("#home").outerHeight(false); 
   canvas.width = ww;
   canvas.height= wh;
   clearCanvas();
