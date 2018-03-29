@@ -17,6 +17,45 @@ body{
 	min-height: 800px;
 }
 
+.event-container{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 10px;
+  background-color:darkgreen;
+  padding: 10px;
+
+}
+.event-container > div {
+  float: right;
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+.day-container{
+  grid-column-start: 1;
+  grid-column-end: 1;
+}
+.month-container{
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+.year-container{
+  grid-column-start: 3;
+  grid-column-end: 
+}
+.eventName{
+  grid-row-start: 2;
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+.details{
+  grid-row-start: 3;
+  grid-column-start: 1;
+  grid-column-end: 4;  
+}
+
+
 .page_container{
 	width : 100vw;
 	height: auto;
