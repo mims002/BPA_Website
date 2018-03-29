@@ -1,0 +1,288 @@
+body{
+	font-size: 100%;
+	font-family: 'Source Sans Pro', sans-serif;
+	overflow-x: hidden;
+	
+	margin: 0 auto;
+	
+	min-width: 320px;
+}
+
+/*
+* This will hold each individual page
+*/
+#home{
+	width : 100vw;
+	height: 100vh;
+	min-height: 800px;
+}
+
+.event-container{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 10px;
+  background-color:darkgreen;
+  padding: 10px;
+
+}
+.event-container > div {
+  float: right;
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+.day-container{
+  grid-column-start: 1;
+  grid-column-end: 1;
+}
+.month-container{
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+.year-container{
+  grid-column-start: 3;
+  grid-column-end: 
+}
+.eventName{
+  grid-row-start: 2;
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+.details{
+  grid-row-start: 3;
+  grid-column-start: 1;
+  grid-column-end: 4;  
+}
+
+
+.page_container{
+	width : 100vw;
+	height: auto;
+	min-height: 100vh; 
+	
+
+	//border-bottom: 1px solid black;
+	//box-shadow: inset 0 8px 8px -9px #111;
+	background: rgba(0,0,0, .05);
+	//overflow: hidden;
+	
+	
+	
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+	
+}
+
+.page_container:before, .page_container:after{
+	 content:"";
+    position:absolute;
+    z-index:-1;
+    -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    box-shadow:0 0 20px rgba(0,0,0,0.8);
+
+    bottom:0;
+    left:10px;
+    right:10px;
+    -moz-border-radius:100px / 10px;
+    border-radius:100px / 10px;
+}
+
+.page_container:after{
+	 right:10px;
+    left:auto;
+    -webkit-transform:skew(8deg) rotate(3deg);
+       -moz-transform:skew(8deg) rotate(3deg);
+        -ms-transform:skew(8deg) rotate(3deg);
+         -o-transform:skew(8deg) rotate(3deg);
+            transform:skew(8deg) rotate(3deg);
+}
+.separator{
+	width: 100vw;
+	height: 1px;
+	
+}
+
+
+.header{
+	
+	
+	text-align: center;
+	color: #3d3c3c;
+	
+	font-size: 4.5em;
+	padding-top: 10vh;
+	padding-bottom: 20px;
+	//text-shadow: 0px 0px 10px rgba(0,0,0,.5);
+	letter-spacing: 20px;
+	font-weight: bold;
+}
+
+
+.headerUnder{
+	text-align: center;
+	color: #3d3c3c;
+	vertical-align: text-top;
+	font-size: 2.5em;
+	margin-top: 30px;
+
+	text-shadow: 0px 0px 5px rgba(0,0,0,.2);
+	letter-spacing: 10px;
+
+}
+
+.simpleText{
+	margin: 0 auto;
+	max-width:900px;
+	text-align: justify;
+	font-size: 1.8em;
+	letter-spacing: 1px;
+	text-shadow: 0px 0px 5px rgba(0,0,0,.2);
+	margin-top: 40px;
+	padding: 5px;
+	padding-bottom: 30px;
+	
+}
+.space{
+	width:100px;
+	height: 30px;
+}
+.menu_containter{
+	list-style-type:none;
+    padding:0px;
+	display: table;    
+
+	margin-top: 20px;
+	position: absolute;
+	bottom:80px;
+	
+	z-index: 2;
+	
+	
+}
+
+
+/*Create a horizontal list with spacing*/
+.menu_containter li{
+	margin-top: 100px;
+	display: incline-block;
+	
+	float: left;
+}
+/*Create a horizontal list with spacing*/
+.menu_containter li a{
+	padding-right:10px;
+	padding-left:10px;
+	color: #3d3c3c;
+	
+	text-decoration:none;
+	text-align: center;
+	letter-spacing:1px;
+	font-size: 3em;
+		
+}
+
+.menu_containter li a:hover{
+	
+	color:#262525;
+	
+	
+}
+
+table{
+	font-size: 2.2em;
+	margin: 0 auto;
+	width: 100%;
+	max-width: 900px;
+	padding-bottom: 20px;
+	
+	
+}
+td, th {
+    border: 0px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+tr:nth-child(even) {
+    background-color: #d35643;
+	color: white;
+}
+
+
+@media screen and (max-width : 800px){
+	body{
+		font-size: 70%;
+	}
+	
+	.header{
+		letter-spacing: 15px;
+		padding: 0;
+		padding-top: 10vh;
+	}
+	.headerUnder{
+		padding:0;
+		line-height: 200%;
+		
+	}
+	.simpleText{
+		margin-top: 50px;
+	}
+	
+	
+}
+
+@media screen and (max-width : 460px){
+	body{
+		font-size: 60%;
+	}
+	#home{
+
+		min-height:550px
+	}
+	.page_container{
+		
+	}
+	.header{
+		letter-spacing: 10px;
+		padding: 0;
+		padding-top: 5vh;
+	}
+	.headerUnder{
+		padding:0;
+		letter-spacing: 9px;
+		margin-top: 10px;
+	}
+	.simpleText{
+		margin-top: 5px;
+	}
+	.menu_containter{
+		margin-top: 20px;
+	}
+}
+
+@media screen and (max-width : 360px){
+	body{
+		font-size: 40%;
+	}
+	#home{
+
+		min-height:500px
+	}
+	.page_container{
+		
+	}
+	.header{
+		letter-spacing: 10px;
+		padding: 0;
+		padding-top: 11vh;
+	}
+	.headerUnder{
+		padding:0;
+		letter-spacing: 9px;
+	}
+	
+}
+
+
