@@ -16,72 +16,13 @@ body{
 	height: 100vh;
 	min-height: 800px;
 }
-.grid {
-  display: grid;
-  grid-gap: 10px;
-  grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
-  grid-auto-rows: 20px;
-}
-.item {
-  background-color: #ffffff;
-}
-
-.photothumb{
-  width: 100%;
-}
-
-.title, .date, .location, .time   {
-  padding: 5px;
-  text-align: center;
- }
-
-.title h3, .date h3, .location h3, .time h3{
-  font-size: 1.2em;
-  color: #ffffff;
-  text-transform: uppercase;
-}
-
-.project .title{
-  background-color: #607D8B;
-}
-
-.blog .title{
-  background-color: #ff9800;
-}
-
-.photo .title{
-  background-color: #ef476f;
-}
-.photo .date{
-  background-color: #ffd166;
-}
-.photo .location{
-  background-color: #06d6a0;
-}
-.photo .time{
-  background-color: #118ab2;
-}
-
-.desc{
-  padding: 10px 10px 5px 10px;
-}
-
-.desc img{
-  width: 50%;
-  margin: 0 10px 10px 0;
-  float: left;
-}
-
-.desc p{
-  margin-bottom: 10px;
-}
 
 
 .page_container{
 	width : 100vw;
 	height: auto;
 	min-height: 100vh; 
-	
+	padding-bottom: 10px;
 
 	//border-bottom: 1px solid black;
 	//box-shadow: inset 0 8px 8px -9px #111;
@@ -184,6 +125,76 @@ body{
 	
 }
 
+.grid {
+	display: grid;
+
+	margin-left: 10px;
+	margin-right: 20px;
+	margin-top: 20px;
+	grid-gap: 10px;
+	grid-template-columns: repeat(auto-fill, minmax(400px,1fr));
+	grid-auto-rows: 20px;
+
+  
+  
+}
+.item {
+	
+	
+	//background-color: #ffffff;
+	box-shadow:0 0 10px rgba(0,0,0,0.3);
+	border-radius: 15px 15px 15px 10px;
+	max-width: 500px;
+	margin: 0 auto;
+	
+ 
+}
+
+.photothumb{
+	width: 100%;
+	border-left: 5px solid white;
+	border-right: 5px solid white;
+	margin-left: -5px;
+	//border-radius: 10px;
+	//box-shadow: 0px 0px 5px 5px white;
+	
+}
+
+.title, .date, .location, .time   {
+	padding: 5px;
+	text-align: center;
+	background-color: rgba(0, 0, 0,.9);
+	
+	
+ }
+.title h3{
+	text-decoration: underline;
+}
+.date{
+	border-radius: 15px 15px 0px 0px;
+}
+.title h3, .date h3, .location h3, .time h3{
+	font-size: 1.4em;
+	color: #ffffff;
+	text-transform: uppercase;
+}
+
+.desc{
+  padding: 10px 10px 5px 10px;
+}
+
+.desc img{
+  width: 50%;
+  margin: 0 10px 10px 0;
+  float: left;
+}
+
+.desc p{
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+
 
 /*Create a horizontal list with spacing*/
 .menu_containter li{
@@ -232,11 +243,18 @@ tr:nth-child(even) {
 }
 
 
-@media screen and (max-width : 800px){
+@media screen and (max-width : 810px){
 	body{
 		font-size: 70%;
 	}
-	
+	.grid { 
+	  grid-gap: 10px;
+	  grid-template-columns: 1fr;
+
+	  
+	  
+	  
+	}
 	.header{
 		letter-spacing: 15px;
 		padding: 0;
@@ -249,6 +267,11 @@ tr:nth-child(even) {
 	}
 	.simpleText{
 		margin-top: 50px;
+	}
+	.item {
+		width: 90vw;
+		max-width: 400px;
+	 
 	}
 	
 	
@@ -281,6 +304,8 @@ tr:nth-child(even) {
 	.menu_containter{
 		margin-top: 20px;
 	}
+	
+	
 }
 
 @media screen and (max-width : 360px){
