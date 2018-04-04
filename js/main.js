@@ -18,6 +18,14 @@ function fixPosition(){
 	$("#socialMedia").css("bottom", 80);
 	
 	
+	//calculated the width
+	
+	var t = Math.floor(x/500);
+		t = Math.min($("#events").children().length,t);
+	print(t);
+	$(".grid").css("grid-template-columns", "repeat("+t+", minmax(500px,1fr))")
+	
+	
 }
 
 function print(x){
